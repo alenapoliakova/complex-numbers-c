@@ -1,7 +1,6 @@
 #pragma once
 #include <iostream>
 #include "ComplexNumber.h"
-using namespace std;
 
 
 ComplexNumber::ComplexNumber() {
@@ -31,19 +30,19 @@ ComplexNumber ComplexNumber::operator*(const ComplexNumber& right) const {
 }
 
 
-istream& operator>>(istream& input, ComplexNumber& number) {
+std::istream& operator>>(std::istream& input, ComplexNumber& number) {
 	// Input from keyboard
-	cout << "\tReal part of number: ";
+	std::cout << "\tReal part of number: ";
 	input >> number.re;
-	cout << "\tImaginary part of number: ";
+	std::cout << "\tImaginary part of number: ";
 	input >> number.im;
 	return input;
 }
 
 
-ostream& operator<<(ostream& output, const ComplexNumber& number) {
+std::ostream& operator<<(std::ostream& output, const ComplexNumber& number) {
 	// Output to console
-	cout << "\t\tComplex number = ";
+	std::cout << "\t\tComplex number = ";
 	output << number.re;
 	if (number.im > 0) {
 		output << " + ";

@@ -1,6 +1,5 @@
 #include <iomanip>
 #pragma once
-using namespace std;
 
 class ComplexNumber {
 private:
@@ -17,7 +16,7 @@ public:
 
 	ComplexNumber operator*(const ComplexNumber& right) const;
 
-	friend istream& operator>>(istream& in, ComplexNumber& number);
+	friend std::istream& operator>>(std::istream& in, ComplexNumber& number);
 
-	friend ostream& operator<<(ostream& out, const ComplexNumber& number);
+	friend std::ostream& operator<<(std::ostream& out, const ComplexNumber& number);
 };
